@@ -1,0 +1,13 @@
+Pessoa.insert({nome:'felipe'});
+Pessoa.insert({nome:'fabiano'});
+Pessoa.insert({nome:'diogo'});
+Pessoa.insert({nome:'rone'});
+Pessoa.insert({nome:'janaina'});
+Pessoa.insert({nome:'renato'});
+Pessoa.insert({nome:'luiz'});
+Pessoa.insert({nome:'bruno'});
+Pessoa.insert({nome:'thiago'});
+Pessoa.insert({nome:'gustavo'});
+Pessoa.insert({nome:'flavio'});
+Pessoa.insert({nome:'wesley'});
+Pessoa.insert({nome:'rodrigo'});

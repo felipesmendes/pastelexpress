@@ -1,0 +1,8 @@
+Item.insert({label:'Carne',nome:'carne',preco:1.8});
+Item.insert({label:'Queijo',nome:'queijo',preco:1.80});
+Item.insert({label:'Pizza',nome:'pizza',preco:2.10});
+Item.insert({label:'Calabresa',nome:'calabresa',preco:2.10});
+Item.insert({label:'Coxinha',nome:'coxinha',preco:2.10});
+Item.insert({label:'Coxinha-Catupiry',nome:'coxinha_catupiry',preco:2.10});
+Item.insert({label:'Esfirra-Carne',nome:'esfirra_carne',preco:2.10});
+Item.insert({label:'Esfirra-Frango',nome:'esfirra_frango',preco:2.10});

@@ -1,0 +1,44 @@
+<template name="produtos">
+  <div class="container">
+  <div class="row">
+    <form class="form-inline">
+  <div class="form-group">
+    <input type="text" class="form-control" id="nomeNovo" placeholder="Nome">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="precoNovo" placeholder="Preco">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="promocaoNovo" placeholder="Promocao">
+  </div>
+  <button type="button" id="cadastrarProduto" class="btn btn-success">Cadastrar</button>
+</form>
+  </div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Preço na promoção</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each produtos}}
+    <tr>
+      <td><input id="nome" class="form-control" type="text" value="{{nome}}"/></td>
+      <td>
+        <div class="col-xs-4">
+          <input id="preco" class="form-control" type="number" value="{{preco}}"/>
+        </div>
+      </td>
+      <td>
+        <div class="col-xs-4">
+          <input id="promocao" class="form-control" type="number" value="{{promocao}}"/>
+        </div>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+</template>

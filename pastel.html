@@ -1,0 +1,24 @@
+<template name="hello">
+  <table class="table table-striped">
+    <thead>
+		<tr>
+			<th>Nome</th>
+      {{#each itens}}
+      <th>{{label}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+    <tbody>
+      {{#each pessoas}}
+      <tr>
+        <td>{{nome}}</td>
+        {{#each itens}}
+        <td>
+          <input type="number" class="form-control" min="0" value="0" name="{{nome}}"/>
+        </td>
+        {{/each}}
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>

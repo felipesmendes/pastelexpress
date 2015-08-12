@@ -1,0 +1,64 @@
+<template name="pedidos">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Pessoa</th>
+      <th>Tipo</th>
+      <th>Quantidade</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each pedidos}}
+    <tr>
+      <td>{{pessoa}}</td>
+      <td>{{tipo}}</td>
+      <td>{{quantidade}}</td>
+      <td><button class="btn btn-danger excluir"><span class="glyphicon glyphicon-remove"></span></button></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<div class="col-md-6">
+  {{#if results}}
+    <table class="table table-condensed table-bordered">
+        <tbody>
+          {{#each arrayify results}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{value}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+
+        <tfoot>
+          {{#with soma}}
+          <tr>
+          <td colspan="2">Total :  {{this}} </td>
+          </tr>
+          {{/with}}
+          <tr>
+          <td colspan="2">SSDD :  {{toFixed ssdd 2}} </td>
+          </tr>
+        </tfoot>
+
+    </table>
+  {{/if}}
+</div>
+<div class="col-md-6">
+  {{#if pedidosPessoa}}
+    <table class="table table-condensed table-bordered">
+      <tbody>
+        {{#each arrayify pedidosPessoa}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{toFixed value 2}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+      {{#with soma}}
+      {{/with}}
+    </table>
+  {{/if}}
+</div>
+</template>
