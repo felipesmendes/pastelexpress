@@ -5,13 +5,14 @@ Router.route('/', function () {
   this.render('pedido',{
     data: function () {
       var pedidos = Pedido.find({pessoa:Meteor.userId()}).fetch();
+      var pessoas = Meteor.users.find({}).fetch();
       var pedidosJoin = [];
       for(i in pedidos){
         var pessoa = Meteor.users.findOne({_id:pedidos[i].pessoa});
         var tipo = Item.findOne({_id:pedidos[i].tipo}).nome;
         pedidosJoin.push({pessoa:pessoa.profile.name,tipo:tipo,quantidade:pedidos[i].quantidade});
       }
-      templateData = { itens: Item.find({}),pedidos:pedidosJoin };
+      templateData = { itens: Item.find({}),pedidos:pedidosJoin,pessoas:pessoas };
       return templateData;
       }
   });
